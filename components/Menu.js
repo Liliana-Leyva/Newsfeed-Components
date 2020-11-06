@@ -1,6 +1,6 @@
 // This is the data we will be using, study it but don't change anything, yet.
 
-const ParcelBundler = require("parcel-bundler");
+
 
 let menuItems = [
   'Students',
@@ -41,12 +41,13 @@ const menuMaker = function(array){
   const menu = document.createElement('div')
   menu.classList.add("menu");
  /* creating ul list*/
-  const ul = document.createElement('ul')
+ const ul = document.createElement('ul')
   menu.appendChild(ul);
 
-  items.array.forEach(element => {
+  array.forEach(function(item) {
   const list = document.createElement('li')
-  list.textContent = element.ul.appendChild(li)
+  list.textContent = item;
+  ul.appendChild(list)
   });
 
   const menuButton = document.querySelector(".menu-button")
@@ -55,5 +56,7 @@ const menuMaker = function(array){
 return menu;
 }
 
-const header = document.querySelector(".header")
+const header = document.querySelector(".header");
 header.appendChild(menuMaker(menuItems));
+
+
